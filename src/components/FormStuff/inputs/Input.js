@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const StyledTextInput = styled.input`
   border: 2px solid
-    ${(props) => (props.error ? 'red' : props.theme.colors.greenDark)};
+    ${(props) =>
+      props.error ? 'red !important' : props.theme.colors.greenDark};
   border-radius: 20px;
   outline: none;
   width: 100%;
@@ -11,7 +12,7 @@ const StyledTextInput = styled.input`
 
   &:focus {
     border-bottom: 4px solid
-      ${(props) => (props.error ? 'red' : props.theme.colors.green)};
+      ${(props) => (props.error ? 'red !important' : props.theme.colors.green)};
   }
 `;
 

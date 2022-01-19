@@ -18,14 +18,19 @@ const InputGroup = styled.div`
     &:placeholder-shown ~ .label {
       font-size: 1.3rem;
       cursor: text;
-      top: 30px;
+      top: 0;
       left: 15px;
     }
   }
 
+  .message {
+    position: absolute;
+    top: 34px;
+    left: 12px;
+  }
+
   .label {
     position: absolute;
-    top: 30px;
     left: 15px;
     display: block;
     transition: 0.2s;
@@ -35,7 +40,8 @@ const InputGroup = styled.div`
   .field:focus {
     ~ .label {
       position: absolute;
-      top: 5px;
+      color: ${(props) => props.theme.colors.green};
+      top: -22px;
       display: block;
       transition: 0.2s;
       font-size: 1rem;
