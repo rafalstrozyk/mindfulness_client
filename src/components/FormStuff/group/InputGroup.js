@@ -26,7 +26,9 @@ const InputGroup = styled.div`
   .message {
     position: absolute;
     top: 34px;
-    left: 12px;
+    right: -35%;
+    transform: translateX(35%);
+    width: 100%;
   }
 
   .label {

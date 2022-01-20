@@ -7,7 +7,7 @@ const Home = () => {
     state.user.token;
   });
   return (
-    <div>
+    <>
       {token ? (
         <div>
           <h1>Home</h1>
@@ -15,7 +15,7 @@ const Home = () => {
       ) : (
         <LoginRegister />
       )}
-    </div>
+    </>
   );
 };
 

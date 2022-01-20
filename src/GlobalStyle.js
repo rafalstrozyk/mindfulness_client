@@ -77,6 +77,5 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
 `;
 export default GlobalStyle;

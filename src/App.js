@@ -7,12 +7,14 @@ import { theme } from './theme';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Root />
-      </ThemeProvider>
-    </BrowserRouter>
+    <div style={{ height: '100vh' }}>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Root />
+        </ThemeProvider>
+      </BrowserRouter>
+    </div>
   );
 };
 

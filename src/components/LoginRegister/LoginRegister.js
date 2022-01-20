@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Input from '../FormStuff/inputs/Input';
 import CenterContainer from '../../containers/CenterContainer';
+import RegisterForm from '../FormStuff/forms/RegisterForm';
+import LoginForm from '../FormStuff/forms/LoginForm';
 
 const LoginRegister = () => {
   const [option, setOption] = useState(false);
@@ -8,22 +9,21 @@ const LoginRegister = () => {
     <CenterContainer>
       <div>
         <div>
-          <button onClick={() => setOption(true)}>Login</button>
-          <button onClick={() => setOption(false)}>Register</button>
+          <button disabled={option} onClick={() => setOption(true)}>
+            Login
+          </button>
+          <button disabled={!option} onClick={() => setOption(false)}>
+            Register
+          </button>
         </div>
         {option ? (
           <div>
-            <Input
-              type="text"
-              className="field"
-              name="name"
-              id="name"
-              required
-              placeholder="Name"
-            />
+            <LoginForm />
           </div>
         ) : (
-          <div>Register</div>
+          <div>
+            <RegisterForm />
+          </div>
         )}
       </div>
     </CenterContainer>
