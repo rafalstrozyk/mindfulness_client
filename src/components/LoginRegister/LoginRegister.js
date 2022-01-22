@@ -16,7 +16,7 @@ const LoginRegister = () => {
             Register
           </button>
         </div>
-        {option ? (
+        {!option ? (
           <div>
             <LoginForm />
           </div>

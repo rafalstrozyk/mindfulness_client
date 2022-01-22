@@ -3,17 +3,18 @@ import { useSelector } from 'react-redux';
 import LoginRegister from '../components/LoginRegister/LoginRegister';
 
 const Home = () => {
-  const token = useSelector((state) => {
-    state.user.token;
-  });
+  const token = useSelector((state) => state.user.token);
   return (
     <>
-      {token ? (
+      {console.log(document.cookie)}
+      {token === null ? (
+        <LoginRegister />
+      ) : token ? (
         <div>
           <h1>Home</h1>
         </div>
       ) : (
-        <LoginRegister />
+        <p>Loading...</p>
       )}
     </>
   );
