@@ -55,7 +55,6 @@ const RegisterForm = () => {
         .then((res) => {
           setIsSubmitting(false);
           dispatch(setToken(res.data.token));
-          console.log(res.data);
         })
         .catch((error) => {
           setIsSubmitting(false);

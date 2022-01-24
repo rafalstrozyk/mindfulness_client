@@ -20,7 +20,7 @@ const App = () => {
         dispatch(setToken(null));
         console.log(error);
       });
-    setTimeout(verifyUser, 1 * 60 * 1000);
+    setTimeout(verifyUser, 5 * 60 * 1000);
   }, [setToken]);
 
   useEffect(() => {
